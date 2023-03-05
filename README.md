@@ -25,11 +25,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Time tracking dashboard Screenshot](./screenshot.jpg)
+![Time tracking dashboard Screenshot](https://github.com/Marchino5791/Frontend-Mentor-Time-tracking-dashboard/blob/main/Screenshot%202023-03-05%2010.24.28.png)
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://github.com/Marchino5791/Frontend-Mentor-Time-tracking-dashboard](https://github.com/Marchino5791/Frontend-Mentor-Time-tracking-dashboard)
 - Live Site URL: []()
 
 ## My process
