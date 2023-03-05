@@ -1,0 +1,134 @@
+@use 'mixin' as *;
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-top: .25rem;
+
+    @include breakpoint('desktop-small') {
+        font-size: 2.5rem;
+    }
+}
+
+p {
+    font-weight: 400;
+    font-size: 0.9375rem;
+}
+
+.profile-picture {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+    outline: 3px solid var(--white);
+    border-radius: 50%;
+
+    @include breakpoint('desktop-small') {
+        width: 40%;
+        margin-bottom: 1rem;
+    }
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--button);
+
+    &:not(:last-of-type) {
+        @include breakpoint('desktop-small') {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--white);
+        outline: none;
+    }
+}
+
+.icon {
+    transform: scale(1.125);
+}
+
+.section__info__top__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.section__info__bottom__hours {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--white);
+
+    @include breakpoint('tablet-small') {
+        margin-bottom: .5rem;
+    }
+
+    @include breakpoint('desktop-small') {
+        font-size: 3.5rem;
+    }
+}
+
+.work {
+    background-color: var(--work);
+
+    .icon {
+        @include clip($top: 14%, $right: 0, $bottom: 42%, $left: 0);
+    }
+}
+
+.play {
+    background-color: var(--play);
+
+    .icon {
+        @include clip($top: 13%, $right: 0, $bottom: 41%, $left: 0);
+    }
+}
+
+.study {
+    background-color: var(--study);
+
+    .icon {
+        @include clip($top: 14%, $right: 0, $bottom: 42%, $left: 0);
+    }
+}
+
+.exercise {
+    background-color: var(--exercise);
+
+    .icon {
+        @include clip($top: 0%, $right: 0, $bottom: 38%, $left: 0);
+    }
+}
+
+.social {
+    background-color: var(--social);
+
+    .icon {
+        @include clip($top: 21%, $right: 0, $bottom: 43%, $left: 0);
+    }
+}
+
+.self-care {
+    background-color: var(--self-care);
+
+    .icon {
+        @include clip($top: 8%, $right: 0, $bottom: 40%, $left: 0);
+    }
+}
+
+a {
+    color: var(--button);
+    font-size: inherit;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--white);
+    }
+}

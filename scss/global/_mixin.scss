@@ -1,0 +1,27 @@
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin clip ($top, $right, $bottom, $left) {
+    clip-path: inset($top $right $bottom $left);
+    --webkit-clip-path: inset($top $right $bottom $left);
+    --o-clip-path: inset($top $right $bottom $left);
+    --ms-clip-path: inset($top $right $bottom $left);
+}
+
+$breakpoints-size: (
+    'tablet-small': 37.5em,
+    'desktop-small': 67.75em,
+    'desktop-large': 80em
+);
+
+@mixin breakpoint ($breakpoint) {
+
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints-size, $breakpoint)) {
+        @content;
+    }
+
+}

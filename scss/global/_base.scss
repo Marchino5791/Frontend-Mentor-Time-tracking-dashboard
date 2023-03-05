@@ -1,0 +1,137 @@
+@use 'mixin' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --account: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --self-care: hsl(43, 84%, 65%);
+    --bg: hsl(226, 43%, 10%);
+    --bg-card: hsl(235, 46%, 20%);
+    --button: hsl(235, 45%, 61%);
+    --text: hsl(236, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+
+    @include breakpoint('desktop-small') {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+}
+
+main {
+    margin: 5rem 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+    @include breakpoint('desktop-large') {
+        max-width: 69.375em;
+        margin: 0 auto;
+    }
+
+    .account {
+        @include breakpoint('desktop-small') {
+            grid-row: 1 / 3;
+        }
+
+        &__top {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            align-items: center;
+            gap: 1.25rem;
+            background-color: var(--account);
+            padding: 2rem 1.5rem;
+            border-radius: 1rem;
+            position: relative;
+            z-index: 1000;
+
+            @include breakpoint('desktop-small') {
+                grid-template-columns: 1fr;
+                padding: 3rem 2rem;
+            }
+        }
+
+        &__bottom {
+            @include flex-between;
+            border-radius: 0 0 1rem 1rem;
+            padding: 2.5rem 1.5rem 1.5rem;
+            margin-top: -1rem;
+            background-color: var(--bg-card);
+
+            @include breakpoint('desktop-small') {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 3rem 2rem;
+            }
+        }
+    }
+
+    .section {
+        &__background {
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-inline: 1.5rem;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        &__info {
+            padding: 1.75rem 1.5rem;
+            margin-top: -1.5rem;
+            background-color: var(--bg-card);
+            border-radius: 1rem;
+
+            &:hover {
+                background-color: var(--button);
+                cursor: pointer;
+            }
+
+            @include breakpoint('desktop-small') {
+                padding: 2rem;
+            }
+
+            &__top {
+                @include flex-between;
+                margin-bottom: .5rem;
+
+                @include breakpoint('desktop-small') {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            &__bottom {
+                @include flex-between;
+
+                @include breakpoint('tablet-small') {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+
+//footer
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-block: 1rem;
+}

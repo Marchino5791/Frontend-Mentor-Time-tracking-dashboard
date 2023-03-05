@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="account">
+      <div class="account__top">
+        <div class="account__top__image">
+          <img src="images/image-jeremy.png" alt="Jeremy Robson's profile picture" class="profile-picture">
+        </div>
+        <div class="account__top__heading">
+          <p>
+            Report for
+          </p>
+          <h1>
+            Jeremy Robson
+          </h1>
+        </div>
+      </div>
+      <div class="account__bottom">
+        <button onclick="daily('data.json')" href="#" id="daily">Daily</button>
+        <button onclick="weekly('data.json')" href="#" id="weekly" autofocus>Weekly</button>
+        <button onclick="monthly('data.json')" href="#" id="monthly">Monthly</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__background work">
+        <img src="images/icon-work.svg" alt="work icon" class="icon">
+      </div>
+      <div class="section__info">
+        <div class="section__info__top">
+          <h2 class="section__info__top__title">Work</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="section__info__bottom">
+          <p class="section__info__bottom__hours"><span class="hours">32</span>hrs</p>
+          <p class="section__info__bottom__last-week">Last <span class="period">Week</span> - <span class="last-hours">36</span>hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__background play">
+        <img src="images/icon-play.svg" alt="joypad icon" class="icon">
+      </div>
+      <div class="section__info">
+        <div class="section__info__top">
+          <h2 class="section__info__top__title">Play</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="section__info__bottom">
+          <p class="section__info__bottom__hours"><span class="hours">10</span>hrs</p>
+          <p class="section__info__bottom__last-week">Last <span class="period">Week</span> - <span class="last-hours">36</span>hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__background study">
+        <img src="images/icon-study.svg" alt="book icon" class="icon">
+      </div>
+      <div class="section__info">
+        <div class="section__info__top">
+          <h2 class="section__info__top__title">Study</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="section__info__bottom">
+          <p class="section__info__bottom__hours"><span class="hours">4</span>hrs</p>
+          <p class="section__info__bottom__last-week">Last <span class="period">Week</span> - <span class="last-hours">7</span>hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__background exercise">
+        <img src="images/icon-exercise.svg" alt="running man icon" class="icon">
+      </div>
+      <div class="section__info">
+        <div class="section__info__top">
+          <h2 class="section__info__top__title">Exercise</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="section__info__bottom">
+          <p class="section__info__bottom__hours"><span class="hours">4</span>hrs</p>
+          <p class="section__info__bottom__last-week">Last <span class="period">Week</span> - <span class="last-hours">5</span>hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__background social">
+        <img src="images/icon-social.svg" alt="thought bubble icon" class="icon">
+      </div>
+      <div class="section__info">
+        <div class="section__info__top">
+          <h2 class="section__info__top__title">Social</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="section__info__bottom">
+          <p class="section__info__bottom__hours"><span class="hours">5</span>hrs</p>
+          <p class="section__info__bottom__last-week">Last <span class="period">Week</span> - <span class="last-hours">10</span>hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__background self-care">
+        <img src="images/icon-self-care.svg" alt="health icon" class="icon">
+      </div>
+      <div class="section__info">
+        <div class="section__info__top">
+          <h2 class="section__info__top__title">Self Care</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+              fill="#BBC0FF" fill-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="section__info__bottom">
+          <p class="section__info__bottom__hours"><span class="hours">2</span>hrs</p>
+          <p class="section__info__bottom__last-week">Last <span class="period">Week</span> - <span class="last-hours">2</span>hrs</p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Marchino5791" target="_blank">Marco Paolino</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
